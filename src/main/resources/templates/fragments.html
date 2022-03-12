@@ -26,6 +26,18 @@
             </div>
         </div>
     </div>
+    <div th:fragment="job-list"><table>
+        <tr th:each="job : ${jobs}">
+            <td>
+                <div><b>ID:&nbsp;</b><span th:text="${job.id}"></span></div>
+                <div><b>Name:&nbsp;</b><span th:text="${job.name}"></span></div>
+                <div><b>Employer:&nbsp;</b><span th:text="${job.employer}"></span></div>
+                <div><b>Location:&nbsp;</b><span th:text="${job.location}"></span></div>
+                <div><b>Position Type:&nbsp;</b><span th:text="${job.positionType}"></span></div>
+                <div><b>Core Competency:&nbsp;</b><span th:text="${job.coreCompetency}"></span></div>
+            </td>
+        </tr>
 
+    </table></div>
 </body>
 </html>
